@@ -179,4 +179,26 @@ const startServer = async () => {
 };
 
 startServer();
+// Function to insert user data
+/*async function insertUserData(userData) {
+  try {
+    const user = new User(userData);
+    await user.save();
+    console.log("User data inserted successfully");
+  } catch (error) {
+    console.error("Error inserting user data:", error);
+  }
+}
+
+// Usage example
+const userData = {
+  phone_number: {
+    countryCode: "+91",
+    number: "7681824426",
+  },
+  name: "Aman Kumar",
+  isPremium: true,
+  password: "$2a$05$NL5wotp2I7EZ7t6VaGNnbOTbBiOUFRyvoKkeZfeLTmRLt5K1Z3duS",
+};
+insertUserData(userData)*/
 module.exports = app;
