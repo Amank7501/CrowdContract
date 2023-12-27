@@ -6,7 +6,9 @@ on:
     paths:
        - 'server/**'
     branches:
-      - main
+      - dev
+    # branches:
+    #   - main
     
 jobs:
   build-frontend-push-img-to-Dockerhub:
@@ -64,6 +66,6 @@ jobs:
         
       - name: build and push to DockerHub
         run: |
-          docker buildx build --platform linux/amd64,linux/arm64/v8 --push --tag rohitraman/crowdcontract-backend:latest ./server
+          docker buildx build --platform linux/amd64,linux/arm64/v8 --push --tag aman/crowdcontract-backend:latest ./server
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
