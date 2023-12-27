@@ -8,7 +8,7 @@ on:
 #       - main
   push:
     branches:
-      - dev1
+      - dev
       # - main
   workflow_run:
     workflows: ["testAndCreateDockerImageBackend", "testAndCreateDockerImage"]
