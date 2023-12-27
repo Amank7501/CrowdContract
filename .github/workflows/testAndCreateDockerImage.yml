@@ -6,7 +6,7 @@ on:
     # paths:
     #   - 'client/**'
     branches:
-      - dev
+      - dev1
       # - main
       
 jobs:
