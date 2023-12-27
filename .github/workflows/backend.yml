@@ -37,7 +37,7 @@ jobs:
         run: |
           cd server
           npm i
-          echo "MONGO_URI='mongodb+srv://prath:${{secrets.DB_PASSWORD}}@crowdcontract.ji7u87b.mongodb.net'
+          echo "MONGO_URI='mongodb+srv://aman:${{secrets.DB_PASSWORD}}@crowdcontract.ji7u87b.mongodb.net'
                 PORT=5051
                 JWT_SECRET_KEY='${{secrets.JWT_SECRET_KEY}}'
                 AES_SECRET_KEY='${{secrets.AES_SECRET_KEY}}'
