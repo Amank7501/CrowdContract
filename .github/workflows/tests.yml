@@ -7,7 +7,7 @@ on:
     branches:
       # - test
       # - main
-      # - dev
+      - dev1
 jobs:
   test-database:
     runs-on: ubuntu-latest
