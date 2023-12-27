@@ -5,8 +5,8 @@ on:
 #    paths:
 #      - 'server/**'
     branches:
-      - test
-      - main
+      # - test
+      # - main
       - dev
 jobs:
   test-database:
