@@ -17,6 +17,7 @@ jobs:
       - name: npm install and test-db
         run: |
           cd server
+          echo '${{secrets.DB_PASSWORD}}'
           npm i
           echo "MONGO_URI='mongodb+srv://aman:${{secrets.DB_PASSWORD}}@crowdcontract.ji7u87b.mongodb.net'
                 PORT=5051
