@@ -38,13 +38,13 @@ jobs:
           cd server
           npm i
           # echo "MONGO_URI='mongodb+srv://aman:${{secrets.DB_PASSWORD}}@crowdcontract.ji7u87b.mongodb.net'
-          echo "MONGO_URI='mongodb+srv://crowdcontract.ji7u87b.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority'
+          echo "MONGO_URI='mongodb+srv://prath:1234@crowdcontract.ji7u87b.mongodb.net'
                 PORT=5051
                 JWT_SECRET_KEY='${{secrets.JWT_SECRET_KEY}}'
                 AES_SECRET_KEY='${{secrets.AES_SECRET_KEY}}'
                 SALT_ROUNDS=5" > .env
           npm run test-db
-          echo "MONGO_URI='mongodb+srv://crowdcontract.ji7u87b.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority/crowdContract'
+          echo "MONGO_URI='mongodb+srv://prath:1234@crowdcontract.ji7u87b.mongodb.net/crowdContract'
                 PORT=5051
                 JWT_SECRET_KEY='${{secrets.JWT_SECRET_KEY}}'
                 AES_SECRET_KEY='${{secrets.AES_SECRET_KEY}}'     
