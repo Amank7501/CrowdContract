@@ -7,8 +7,7 @@ on:
       - 'client/**'
     branches:
       - dev
-    # branches:
-    #   - main
+      - main
       
 jobs:
   build-frontend-push-img-to-Dockerhub:
