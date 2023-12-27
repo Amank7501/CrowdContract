@@ -3,9 +3,9 @@ name: Ansible deploy
 env:
   "ANSIBLE_CONFIG" : /home/runner/work/crowdContract/crowdContract/ansible.cfg
 on:
-  push:
-    branches:
-      - dev
+#   push:
+#     branches:
+#       - main
   workflow_run:
     workflows: ["testAndCreateDockerImageBackend", "testAndCreateDockerImage"]
     types:
