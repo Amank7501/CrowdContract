@@ -43,7 +43,7 @@ jobs:
                 AES_SECRET_KEY='${{secrets.AES_SECRET_KEY}}'
                 SALT_ROUNDS=5" > .env
           npm run test-db
-          echo "MONGO_URI='mongodb+srv://prath:${{secrets.DB_PASSWORD}}@crowdcontract.ji7u87b.mongodb.net/crowdContract'
+          echo "MONGO_URI='mongodb+srv://aman:${{secrets.DB_PASSWORD}}@crowdcontract.ji7u87b.mongodb.net/crowdContract'
                 PORT=5051
                 JWT_SECRET_KEY='${{secrets.JWT_SECRET_KEY}}'
                 AES_SECRET_KEY='${{secrets.AES_SECRET_KEY}}'     
