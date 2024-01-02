@@ -3,7 +3,8 @@ name: CICD
 
 on:
   push:
-    branches: [myworkflow]
+    branches: 
+      - myworkflow
 jobs:
   build:
     runs-on: ubuntu-latest
