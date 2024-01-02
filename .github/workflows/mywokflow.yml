@@ -2,7 +2,29 @@
 name: CICD
 
 on:
-    push:
-        branches:
-            -myworkflow
-            
+  push:
+    branches: [myworkflow]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: action/checkout@v3
+      - name: Login to docker hub
+        uses: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_TOKEN}}
+      - name: Build docker inmage
+        uses: docker build -t backendimage/CrowdContract ./CrowdContract/server
+      - name: Publish image to docker hub
+        uses: docker push backendimage/CrowdContact:latest
+
+  deploy:
+    needs: build 
+    runs-on: [aws-ec2]
+    steps: 
+      - name: Pull image from docker hub
+        run: docker pull backendimage/CrowdContract:latest
+      - name: Delete old container
+        run: docker rm -f crowdcontract-container
+      - name: Run docker container
+        run: docker run -d 0p 5001:5001 --name crowdcontract-container backendimage/CrowdContract
+
