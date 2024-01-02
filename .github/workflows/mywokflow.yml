@@ -20,10 +20,7 @@ jobs:
       - name: build and push to DockerHub
         run: |
           docker buildx build --platform linux/amd64,linux/arm64/v8 --push --tag aman7681/backendimage:latest ./server
-    #   - name: Build docker inmage
-    #     uses: docker build -t backendimage/CrowdContract ./CrowdContract/server
-    #   - name: Publish image to docker hub
-    #     uses: docker push backendimage/CrowdContact:latest
+    
 
   deploy:
     needs: build
