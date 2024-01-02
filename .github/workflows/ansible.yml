@@ -6,6 +6,10 @@ on:
 #   push:
 #     branches:
 #       - main
+  push:
+    branches:
+      - dev
+      # - main
   workflow_run:
     workflows: ["testAndCreateDockerImageBackend", "testAndCreateDockerImage"]
     types:
