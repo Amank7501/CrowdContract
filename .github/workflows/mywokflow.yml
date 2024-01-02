@@ -18,7 +18,7 @@ jobs:
         uses: docker push backendimage/CrowdContact:latest
 
   deploy:
-    needs: build 
+    needs: build
     runs-on: [aws-ec2]
     steps: 
       - name: Pull image from docker hub
